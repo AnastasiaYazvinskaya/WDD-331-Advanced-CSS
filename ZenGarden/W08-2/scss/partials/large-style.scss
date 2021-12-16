@@ -1,0 +1,240 @@
+$screen-width: 100vw;
+/* Large view - width >= 600px */
+@media only screen and (min-width: 625px){
+    .page-wrapper {
+        padding-top: 85vh;
+    }
+    /* INTRO */
+    .intro {
+        /* Header (Banner) */
+        header {
+            padding: 90px 20px; //change height of this header
+            font-size: x-large;
+            position: absolute; 
+            top: 30vh;
+            left: 50%;
+            transform: translateX(-50%);
+            
+            h2 {
+                font-size: medium; //medium font size
+                margin-top: -30px; //place closer to main header
+            }
+        }
+        /* Summary */
+        .summary {
+            font-size: medium;
+        }
+        /* Preamble */
+        .preamble {
+            all: unset;
+            h3 {
+                position: absolute;
+                right: inherit;
+                left: 50%;
+                transform: translateX(-210%);
+                top: 50vh;
+                
+                @media only screen and (min-width: 800px) {
+                    transform: translateX(-260%);
+                    
+                }
+            }
+            &.open p:last-child {
+                all: unset;
+            }
+        }
+    }
+    /* SUPPORTING */
+    .supporting {
+        /* Explanation */
+        .explanation {
+            all: unset;
+            h3 {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-200%);
+                top: 25vh;
+                
+                @media only screen and (min-width: 800px) {
+                    transform: translateX(-250%);
+                    
+                }
+            }
+            &.open p:last-child {
+                all: unset;
+            }
+        }
+        /* Participation */
+        .participation {
+            all: unset;
+            h3 {
+                position: absolute;
+                right: inherit;
+                left: 50%;
+                transform: translateX(-130%);
+                top: 13vh;
+                
+                @media only screen and (min-width: 800px) {
+                    transform: translateX(-180%);
+                    
+                }
+            }
+            &.open p:last-child {
+                all: unset;
+            }
+        }
+        /* Benefits */
+        .benefits {
+            all: unset;
+            h3 {
+                position: absolute;
+                left: 50%;
+                top: 17vh;
+                
+                @media only screen and (min-width: 800px) {
+                    transform: translateX(50%);
+                    
+                }
+            }
+            &.open p:last-child {
+                all: unset;
+            }
+        }
+        
+        /* Requirements */
+        .requirements {
+            all: unset;
+            h3 {
+                position: absolute;
+                right: inherit;
+                left: 50%;
+                transform: translateX(100%);
+                top: 25vh;
+                
+                @media only screen and (min-width: 800px) {
+                    transform: translateX(150%);
+                    
+                }
+            }
+            &.open p:last-child {
+                all: unset;
+            }
+        }
+        /* Footer */
+        footer {
+            position: fixed; //make it fixed
+            bottom: 10px; //place at the bottom of the page
+            left: 50%; //place at the center (left side)
+            transform: translateX(-50%); //place at the center
+            a {
+                display: inline; //show in line
+                padding: 5px 0; //save space around
+                font-size: small; //small font size
+                text-decoration: none; //delete text decorations
+            }
+        }
+    }
+    /* WRAPPER*/
+    .wrapper {
+        /* Design selection */
+        .design-selection {
+            all: unset;
+            h3 {
+                position: absolute;
+                right: inherit;
+                left: 50%;
+                transform: translateX(120%);
+                top: 55vh;
+                
+                @media only screen and (min-width: 800px) {
+                    transform: translateX(170%);
+                    
+                }
+            }
+            &.open nav:last-child {
+                all: unset;
+            }
+            ul {
+                background-color: aquamarine;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                overflow-x: scroll;
+                scroll-snap-type: x mandatory;
+
+                /* Design a scrollbar */
+                &::-webkit-scrollbar {
+                    height: 6px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background: #000; 
+                    border-radius: 10px;
+                }
+                li {
+                    scroll-snap-align: start;
+                }
+            }
+            li {
+                width: 100vw;
+                background-color: rgb(217, 176, 255);
+                text-align: center;
+                &:first-child {
+                    margin-left: -40px;
+                    background-color: antiquewhite;
+                }
+        
+                /* Adding a preview picture */
+                .design-name {
+        
+                    &::before {
+                    content: "";
+                    width: 98vw;
+                    height: 50vw;
+                    max-height: 300px;
+                    display: inline-block;
+                    background-size: 100vw;
+                    background-image: url("../images/image.png");
+                    background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+        /* Design archives */
+        .design-archives {
+            all: unset;
+            h3 {
+                position: absolute;
+                left: 50%;
+                transform: translateX(75%);
+                top: 75vh;
+                
+                @media only screen and (min-width: 800px) {
+                    transform: translateX(125%);
+                    
+                }
+            }
+            &.open nav:last-child {
+                all: unset;
+            }
+        }
+        /* Zen resources */
+        .zen-resources {
+            all: unset;
+            h3 {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-140%);
+                top: 73vh;
+                
+                @media only screen and (min-width: 800px) {
+                    transform: translateX(-190%);
+                    
+                }
+            }
+            &.open nav:last-child {
+                all: unset;
+            }
+        }
+    }
+}

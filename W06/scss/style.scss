@@ -1,0 +1,66 @@
+/*
+Author: Anastasia Yazvinskaya
+Class: WDD 331 - 09 (Fall 2021)
+Assignment: SVG Card Designs (W06)
+*/
+$card-background: #F8FDD9;
+$card-border: #D0E361;
+$card-width: 40vw;
+$card-height: $card-width * 1.4;
+
+$black: #000000;
+$white: #FFFFFF;
+$pink-cream: #F782A1;
+$blue-dec: #363ACD;
+$green-dec: #91F55B;
+$dough: #FFE090;
+$broun-lines: #ECBA56;
+$blue-eye: #91A5D7;
+$pink-cheek: #E8818D;
+
+$purple: #AB42A2;
+
+$size50: 14%;
+
+svg {
+  background: $card-background;
+  border: 2px solid $card-border;
+  border-radius: $size50;
+  width: $card-width;
+  height: $card-height;
+}
+path {
+  stroke: $black;
+  stroke-width: 3;
+  fill: none;
+}
+#cream path{
+  fill: $pink-cream;
+}
+#body {
+  fill: $dough;
+}
+.blue {
+  fill: $blue-dec;
+}
+.green {
+  fill: $green-dec;
+}
+#lines {
+  stroke: $broun-lines;
+}
+circle {
+  stroke: $white;
+  fill: $white;
+}
+.cheek {
+  stroke: $pink-cheek;
+  fill: $pink-cheek;
+}
+.eye {
+  fill: $blue-eye;
+}
+
+polygon {
+  fill: $purple;
+}

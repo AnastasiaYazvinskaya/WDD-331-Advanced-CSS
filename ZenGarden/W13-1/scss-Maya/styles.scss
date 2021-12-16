@@ -1,0 +1,263 @@
+/*
+Author: Anastasia Yazvinskaya, Jatsiri Martinez, Gabriela Alvarez
+Class: WDD 331 - 09 (Fall 2021)
+Assignment: ZenGarden (W08-W13)
+*/
+
+$color-1: #dee2ed; // 
+$color-2: #a78fa9; // 
+$color-3: #644356; // 
+$color-4: #516559; // 
+$color-5: #9db18e; //
+$color-6: #ccc; // 
+
+$success: #6fce72; // green
+$alert: #f18686; // red
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Open+Sans+Condensed:wght@300&display=swap');
+$primary-font: 'Open Sans Condensed', sans-serif;
+$secondary-font: 'Acme', sans-serif;
+
+
+h1,
+h2, h3 {
+  font-family: $secondary-font;
+  color: $color-3;
+}
+p {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: $color-4;
+}
+a {
+    color: darken($color-2, 15%);
+    text-decoration: underline;
+}
+
+/* Base design (Small view - width: 300px - 600px) */
+body{
+    padding:30px;
+    background-color:  #fff;
+}
+.page-wrapper {
+    margin: 0 auto;
+}
+ul, li {
+    list-style: none;
+}
+/* INTRO */
+/* Banner */
+.intro {
+    header {
+        text-align: center;
+
+        h1 {
+            margin-top: -35px;
+
+            &::before {
+                content: url("../images/logo1.png");
+                margin: 2px;
+                position: relative;
+                top: 40px;
+            }
+        }
+
+        h2{
+            font-size: small;
+            margin-left: 100px;
+            margin-top: -20px;
+        }
+    }
+    /* Summary */
+    .summary {
+        margin: 30px auto;
+        text-align: center;
+    }
+    /* Preamble */
+    .preamble h3 {
+        text-align: center;
+    }
+}
+
+/* SUPPORTING */
+.supporting {
+    /* Explanation, Participation, Benefits, Requirements */
+     div h3 {
+        margin-bottom: -10px;
+     }
+     div:nth-child(2n) h3 {
+        text-align: right;
+    }
+    /* Footer */
+    footer {
+        text-align: center;
+        a {
+            margin: 0 10px;
+        }
+    }
+}
+
+/* WRAPPER*/
+.wrapper {
+    text-align: center;
+
+    /* Design selection */
+    .design-selection ul {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+
+        /* Design a scrollbar */
+        &::-webkit-scrollbar {
+            height: 6px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #000; 
+            border-radius: 10px;
+        }
+        li {
+            scroll-snap-align: start;
+        }
+    }
+    .design-selection li {
+        flex: 0 0 100%;
+        text-align: center;
+
+        /* Adding a preview picture */
+        .design-name::before {
+            content: "";
+            width: 100vw;
+            height: 50vw;
+            max-height: 300px;
+            display: inline-block;
+            background-size: 100vw;
+           // background-image: url("../images/image.png");
+            background-repeat: no-repeat;
+        }
+        &:nth-child(1) .design-name::before{
+            background-image: url("../images/midCenturyModern.png");
+        }
+        &:nth-child(2) .design-name::before {
+            background-image: url("../images/garments.png");
+        }
+        &:nth-child(3) .design-name::before {
+            background-image: url("../images/steel.png");
+        }
+        &:nth-child(4) .design-name::before {
+            background-image: url("../images/apothecary.png");
+        }
+        &:nth-child(5) .design-name::before {
+            background-image: url("../images/screenFiller.png");
+        }
+        &:nth-child(6) .design-name::before {
+            background-image: url("../images/fountainKiss.png");
+        }
+        &:nth-child(7) .design-name::before {
+            background-image: url("../images/robotNamedJimmy.png");
+        }
+        &:nth-child(8) .design-name::before{
+            background-image: url("../images/verdeModerna.png");
+        }
+    }
+  
+
+    /* Design archives */
+    .design-archives {
+        ul {
+            display: flex;
+            flex-flow: row nowrap;
+            align-content: space-between;
+        }
+        li {
+            flex: 0 0 50%;
+            text-align: center;
+        }
+    }
+    /* Zen resources */
+    .zen-resources {
+        ul {
+            display: flex;
+            flex-flow: row nowrap;
+            align-content: space-between;
+        }
+        li {
+            flex: 0 0 20%;
+            text-align: center;
+        }
+    }
+}
+
+
+/* Additional design (Large view - width >= 600px*/
+@media only screen and (min-width: 600px) {
+    body{
+        padding: 50px;
+    }
+    /* INTRO */
+    .intro {
+        display: grid;
+        grid-template-columns: 48.5% 48.5%;
+        grid-gap: 20px;
+
+        /* Summary */
+        .summary {
+            margin-top: -5px;
+            text-align: right;
+            font-size: medium;
+
+            p:nth-child(1) {
+                font-size: smaller;
+                padding-left: 40%;
+                margin-bottom: -15px;
+            }
+        }
+        /* Preamble */
+        div:nth-child(3) {
+            grid-column: 1/3;
+            padding-left: 48.5%;
+            margin-top: -50px;
+        }  
+    }
+    /* SUPPORTING */
+    .supporting {
+        display: grid;
+        grid-template-columns: 48.5% 48.5%;
+        grid-gap: 20px;
+
+        /* Explanation, Requirements, Footer */
+        div:nth-child(1), div:nth-child(4), footer {
+            grid-column: 1/3;
+        }
+        /* Partticipation, Benefits, Requirements*/
+        div:nth-child(2) h3, div:nth-child(3) h3, div:nth-child(4) h3 {
+            text-align: center;
+        }
+        /* Participation */
+        .participation {
+            direction: rtl;
+
+            p {
+                direction: ltr;
+            } 
+        }
+        /* Creating a scrollbar */
+        div:nth-child(2) {
+            height: 200px;
+            overflow-y: scroll;
+    
+            &::-webkit-scrollbar {
+                width: 6px;
+            }
+            &::-webkit-scrollbar-track {
+                border-radius: 10px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #000;
+                border-radius: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,211 @@
+/*
+Author: Anastasia Yazvinskaya, Jatsiri Martinez, Gabriela Alvarez
+Class: WDD 331 - 09 (Fall 2021)
+Assignment: ZenGarden (W08-W13)
+*/
+
+/* Base design (Small view - width: 300px - 600px) */
+.page-wrapper {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 100%;
+}
+ul, li {
+    list-style: none;
+}
+/* INTRO */
+/* Banner */
+.intro {
+    header {
+        text-align: center;
+
+        h1 {
+            margin-top: -35px;
+
+            &::before {
+                content: url("../images/logo1.png");
+                margin: 2px;
+                position: relative;
+                top: 40px;
+            }
+        }
+
+        h2{
+            font-size: small;
+            margin-left: 100px;
+            margin-top: -20px;
+        }
+    }
+    /* Summary */
+    .summary {
+        margin: 30px auto;
+        text-align: center;
+    }
+    /* Preamble */
+    .preamble h3 {
+        text-align: center;
+    }
+}
+
+/* SUPPORTING */
+.supporting {
+    /* Explanation, Participation, Benefits, Requirements */
+     div h3 {
+        margin-bottom: -10px;
+     }
+     div:nth-child(2n) h3 {
+        text-align: right;
+    }
+    /* Footer */
+    footer {
+        text-align: center;
+        a {
+            margin: 0 10px;
+        }
+    }
+}
+
+/* WRAPPER*/
+.sidebar {
+    grid-row-start: 2;
+}
+.wrapper {
+    text-align: center;
+
+    h3 {
+        display: none;
+    }
+
+    /* Design selection */
+    .design-selection {
+        ul {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+
+            /* Design a scrollbar */
+            &::-webkit-scrollbar {
+                height: 6px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #000; 
+                border-radius: 10px;
+            }
+            li {
+                scroll-snap-align: start;
+            }
+        }
+        li {
+            flex: 0 0 100%;
+            text-align: center;
+    
+            /* Adding a preview picture */
+            .design-name {
+    
+                &::before {
+                content: "";
+                width: 100vw;
+                height: 50vw;
+                max-height: 300px;
+                display: inline-block;
+                background-size: 100vw;
+                background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+
+    /* Design archives */
+    .design-archives {
+        ul {
+            display: flex;
+            flex-flow: row nowrap;
+            align-content: space-between;
+        }
+        li {
+            flex: 0 0 50%;
+            text-align: center;
+        }
+    }
+    /* Zen resources */
+    .zen-resources {
+        ul {
+            display: flex;
+            flex-flow: row nowrap;
+            align-content: space-between;
+        }
+        li {
+            flex: 0 0 20%;
+            text-align: center;
+        }
+    }
+}
+
+/* Additional design (Large view - width >= 600px*/
+@media only screen and (min-width: 650px) {
+    /* INTRO */
+    .intro {
+        display: grid;
+        grid-template-columns: 48.5% 48.5%;
+        grid-gap: 20px;
+        /* Summary */
+        .summary {
+            margin-top: -5px;
+            text-align: right;
+            font-size: medium;
+
+            p:nth-child(1) {
+                font-size: smaller;
+                padding-left: 40%;
+                margin-bottom: -15px;
+            }
+        }
+        /* Preamble */
+        div:nth-child(3) {
+            grid-column: 1/3;
+            padding-left: 48.5%;
+            margin-top: -50px;
+        }  
+    }
+    /* SUPPORTING */
+    .supporting {
+        display: grid;
+        grid-template-columns: 48.5% 48.5%;
+        grid-gap: 20px;
+
+        /* Explanation, Requirements, Footer */
+        div:nth-child(1), div:nth-child(4), footer {
+            grid-column: 1/3;
+        }
+        /* Partticipation, Benefits, Requirements*/
+        div:nth-child(2) h3, div:nth-child(3) h3, div:nth-child(4) h3 {
+            text-align: center;
+        }
+        /* Participation */
+        .participation {
+            direction: rtl;
+
+            p {
+                direction: ltr;
+            } 
+        }
+        /* Creating a scrollbar */
+        div:nth-child(2) {
+            height: 200px;
+            overflow-y: scroll;
+    
+            &::-webkit-scrollbar {
+                width: 6px;
+            }
+            &::-webkit-scrollbar-track {
+                border-radius: 10px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #000;
+                border-radius: 10px;
+            }
+        }
+    }
+}

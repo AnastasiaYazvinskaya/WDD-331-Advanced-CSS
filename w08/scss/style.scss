@@ -1,0 +1,122 @@
+/*
+Author: Anastasia Yazvinskaya
+Class: WDD 331 - 09 (Fall 2021)
+Assignment: Card Front part 1 (W07)
+*/
+
+$card-width: 40vw;
+$card-height: $card-width*1.4;
+$font-size-number: $card-width * 0.1;
+$icon-size: $card-width / 4.5;
+$color-1: #ff1c1c; //Pink
+$color-2: #b3f36d; //Green
+// $color-3: #000;
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    border: 0.1vw solid grey;
+    height: $card-height;
+    width: $card-width;
+    border-radius: 3vw;
+    margin: 4vw;
+    box-shadow: 0.5vw 0.5vw 1vw grey;
+}
+
+.card-front {
+    padding: 1vw;
+}
+
+.icon {
+    width: $icon-size;
+    height: $icon-size;
+}
+.red {
+  stroke: $color-1;
+  fill: $color-1;
+}
+.green {
+  stroke: $color-2;
+  fill: $color-2;
+}
+
+.number {
+    text-align: center;
+    font-size: $font-size-number;
+  
+    & > .icon {
+        width: $icon-size * .5;
+        height: $icon-size *.5;
+    }
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+@supports (display: grid) {
+  .row {
+    display: grid;
+    grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+    grid-template-rows: 13.5vw 13.5vw 13.5vw 13.5vw;
+  }
+  .cell:nth-of-type(2), .cell:nth-of-type(5), .cell:nth-of-type(7) {
+    grid-column: 2 / span 2;
+  }
+  .cell:nth-of-type(5) {
+    grid-row: 3;
+  }
+  .cell:nth-of-type(3), .cell:nth-of-type(6), .cell:nth-of-type(8) {
+    grid-column: 6 / span 2;
+  }
+  .cell:nth-of-type(4) {
+    grid-row: 2;
+    grid-column: 4 / span 4;
+  }
+}
+
+@supports not (display: grid) {
+  .row {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: space-between;
+    height: 100%;
+  }
+  .cell {
+    flex: 1;
+    text-align: center;
+  }
+  
+  //variables
+  $num-columns : 8;
+  $one-column : 100% / $num-columns;
+  $loop-start: 1;
+  $loop-end: $num-columns + 1;
+  
+  @mixin col($span-num) {
+    flex: 0 0 $one-column * $span-num;
+  }
+
+  @mixin offset($offset-num) {
+    margin-left: $one-column * $offset-num;
+  }
+
+  @for $index from $loop-start to $loop-end {
+      .col-#{$index} {
+          @include col($index);
+      }
+  }
+  
+  @for $index from $loop-start to $loop-end {
+      .offset-#{$index} {
+          @include offset($index);
+      }
+  }
+}

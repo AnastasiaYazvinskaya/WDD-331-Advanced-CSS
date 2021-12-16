@@ -1,0 +1,476 @@
+/*
+Author: Anastasia Yazvinskaya, Jatsiri Martinez, Gabriela Alvarez
+Class: WDD 331 - 09 (Fall 2021)
+Assignment: ZenGarden (W08-W13)
+*/
+/* Variables */
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Open+Sans+Condensed:wght@300&display=swap");
+/* Base design */
+.page-wrapper {
+  margin: 0 auto;
+  padding-top: 45px;
+  padding-bottom: 20px; }
+
+header, h3 {
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 50%;
+  width: fit-content;
+  padding: 25px 5px; }
+
+h3 {
+  max-width: 135px; }
+  h3:hover {
+    cursor: pointer; }
+
+p, ul, nav, a {
+  display: none; }
+
+.open a {
+  display: inline; }
+
+.open p, .open ul, .open nav {
+  display: block; }
+
+ul, li {
+  list-style: none; }
+
+/* Additional design (Small view - width < 600px) */
+/* Small view - width: 300px - 600px */
+/* INTRO */
+.intro {
+  /* Header (Banner) */
+  /* Summary */
+  /* Preamble */ }
+  .intro header {
+    padding: 45px 5px;
+    transition: all 0.5s ease-out; }
+    .intro header h2 {
+      font-size: small;
+      margin-top: -20px; }
+  .intro .summary {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: small; }
+    .intro .summary p, .intro .summary a {
+      display: inline-block;
+      margin: 0 auto; }
+  .intro .preamble {
+    position: relative;
+    bottom: 10px; }
+    .intro .preamble h3 {
+      position: inherit;
+      right: 80px;
+      padding: 45px 5px;
+      transition: all 0.5s ease-out; }
+    .intro .preamble.open p:last-child {
+      margin-bottom: 100px; }
+
+/* SUPPORTING */
+.supporting {
+  /* Explanation */
+  /* Participation */
+  /* Benefits */
+  /* Requirements */
+  /* Footer */ }
+  .supporting .explanation {
+    position: relative;
+    bottom: 100px;
+    margin-bottom: -100px; }
+    .supporting .explanation h3 {
+      position: inherit;
+      left: 80px;
+      padding: 45px 5px;
+      transition: all 0.5s ease-out; }
+    .supporting .explanation.open p:last-child {
+      margin-bottom: 55px; }
+  .supporting .participation {
+    position: relative;
+    bottom: 50px;
+    margin-bottom: -50px; }
+    .supporting .participation h3 {
+      position: inherit;
+      right: 32.5px;
+      padding: 45px 5px;
+      transition: all 0.5s ease-out; }
+    .supporting .participation.open p:last-child {
+      margin-bottom: 70px; }
+  .supporting .benefits {
+    position: relative;
+    bottom: 65px;
+    margin-bottom: -65px; }
+    .supporting .benefits h3 {
+      position: inherit;
+      left: 120px;
+      transition: all 0.5s ease-out; }
+    .supporting .benefits.open p:last-child {
+      margin-bottom: 30px; }
+  .supporting .requirements {
+    position: relative;
+    bottom: 25px;
+    margin-bottom: -25px; }
+    .supporting .requirements h3 {
+      position: inherit;
+      left: 40px;
+      padding: 45px 5px;
+      transition: all 0.5s ease-out; }
+    .supporting .requirements.open p:last-child {
+      margin-bottom: 85px; }
+  .supporting footer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%); }
+    .supporting footer a {
+      display: inline;
+      padding: 5px 0;
+      font-size: small;
+      text-decoration: none; }
+
+/* WRAPPER*/
+.wrapper {
+  /* Design selection */
+  /* Design archives */
+  /* Zen resources */ }
+  .wrapper .design-selection {
+    position: relative;
+    bottom: 80px;
+    margin-bottom: -80px; }
+    .wrapper .design-selection h3 {
+      position: inherit;
+      right: 85px;
+      padding: 55px 5px;
+      transition: all 0.5s ease-out; }
+    .wrapper .design-selection.open nav:last-child {
+      margin-bottom: 65px; }
+    .wrapper .design-selection ul {
+      background-color: aquamarine;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      /* Design a scrollbar */ }
+      .wrapper .design-selection ul::-webkit-scrollbar {
+        height: 6px; }
+      .wrapper .design-selection ul::-webkit-scrollbar-thumb {
+        background: #000;
+        border-radius: 10px; }
+      .wrapper .design-selection ul li {
+        scroll-snap-align: start; }
+    .wrapper .design-selection li {
+      width: 100vw;
+      background-color: #d9b0ff;
+      text-align: center;
+      /* Adding a preview picture */ }
+      .wrapper .design-selection li:first-child {
+        margin-left: -40px;
+        background-color: antiquewhite; }
+      .wrapper .design-selection li .design-name::before {
+        content: "";
+        width: 98vw;
+        height: 50vw;
+        max-height: 300px;
+        display: inline-block;
+        background-size: 100vw;
+        background-image: url("../images/image.png");
+        background-repeat: no-repeat; }
+  .wrapper .design-archives {
+    position: relative;
+    bottom: 60px;
+    margin-bottom: -60px; }
+    .wrapper .design-archives h3 {
+      position: inherit;
+      left: 95px;
+      padding: 30px 5px;
+      transition: all 0.5s ease-out; }
+    .wrapper .design-archives.open nav:last-child {
+      margin-bottom: 55px; }
+  .wrapper .zen-resources {
+    position: relative;
+    bottom: 50px;
+    margin-bottom: -50px; }
+    .wrapper .zen-resources h3 {
+      position: inherit;
+      padding: 35px 5px;
+      transition: all 0.5s ease-out; }
+    .wrapper .zen-resources.open nav:last-child {
+      margin-bottom: 0px; }
+
+/* Additional design (Large view - width >= 600px) */
+/* Large view - width >= 600px */
+@media only screen and (min-width: 625px) {
+  .page-wrapper {
+    padding-top: 85vh; }
+  /* INTRO */
+  .intro {
+    /* Header (Banner) */
+    /* Summary */
+    /* Preamble */ }
+    .intro header {
+      padding: 90px 20px;
+      font-size: x-large;
+      position: absolute;
+      top: 30vh;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: transform 0.5s ease-out; }
+      .intro header h2 {
+        font-size: medium;
+        margin-top: -30px; }
+    .intro .summary {
+      font-size: medium; }
+    .intro .preamble {
+      all: unset; }
+      .intro .preamble h3 {
+        position: absolute;
+        right: inherit;
+        left: 50%;
+        transform: translateX(-210%);
+        top: 50vh;
+        transition: transform 0.5s ease-out; } }
+      @media only screen and (min-width: 625px) and (min-width: 800px) {
+        .intro .preamble h3 {
+          transform: translateX(-260%);
+          transition: transform 0.5s ease-out; } }
+
+@media only screen and (min-width: 625px) {
+        .intro .preamble h3.open {
+          position: static;
+          transform: translateX(-160%);
+          transition: all 0.5s ease-out; }
+      .intro .preamble.open p:last-child {
+        margin-bottom: auto; }
+  /* SUPPORTING */
+  .supporting {
+    /* Explanation */
+    /* Participation */
+    /* Benefits */
+    /* Requirements */
+    /* Footer */ }
+    .supporting .explanation {
+      all: unset; }
+      .supporting .explanation h3 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-200%);
+        top: 25vh;
+        transition: transform 0.5s ease-out; } }
+      @media only screen and (min-width: 625px) and (min-width: 800px) {
+        .supporting .explanation h3 {
+          transform: translateX(-250%);
+          transition: transform 0.5s ease-out; } }
+
+@media only screen and (min-width: 625px) {
+        .supporting .explanation h3.open {
+          position: static;
+          transform: translateX(-160%);
+          transition: all 0.5s ease-out; }
+      .supporting .explanation.open p:last-child {
+        margin-bottom: auto; }
+    .supporting .participation {
+      all: unset; }
+      .supporting .participation h3 {
+        position: absolute;
+        right: inherit;
+        left: 50%;
+        transform: translateX(-130%);
+        top: 13vh;
+        transition: transform 0.5s ease-out; } }
+      @media only screen and (min-width: 625px) and (min-width: 800px) {
+        .supporting .participation h3 {
+          transform: translateX(-180%);
+          transition: transform 0.5s ease-out; } }
+
+@media only screen and (min-width: 625px) {
+        .supporting .participation h3.open {
+          position: static;
+          transform: translateX(-160%);
+          transition: all 0.5s ease-out; }
+      .supporting .participation.open p:last-child {
+        margin-bottom: auto; }
+    .supporting .benefits {
+      all: unset; }
+      .supporting .benefits h3 {
+        position: absolute;
+        left: 50%;
+        top: 17vh;
+        transition: transform 0.5s ease-out; } }
+      @media only screen and (min-width: 625px) and (min-width: 800px) {
+        .supporting .benefits h3 {
+          transform: translateX(50%);
+          transition: transform 0.5s ease-out; } }
+
+@media only screen and (min-width: 625px) {
+        .supporting .benefits h3.open {
+          position: static;
+          transform: translateX(-160%);
+          transition: all 0.5s ease-out; }
+      .supporting .benefits.open p:last-child {
+        margin-bottom: auto; }
+    .supporting .requirements {
+      all: unset; }
+      .supporting .requirements h3 {
+        position: absolute;
+        right: inherit;
+        left: 50%;
+        transform: translateX(100%);
+        top: 25vh;
+        transition: transform 0.5s ease-out; } }
+      @media only screen and (min-width: 625px) and (min-width: 800px) {
+        .supporting .requirements h3 {
+          transform: translateX(150%);
+          transition: transform 0.5s ease-out; } }
+
+@media only screen and (min-width: 625px) {
+      .supporting .requirements.open p:last-child {
+        margin-bottom: auto; }
+      .supporting .requirements.open {
+        position: static;
+        transform: translateX(-160%);
+        transition: all 0.5s ease-out; }
+    .supporting footer {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%); }
+      .supporting footer a {
+        display: inline;
+        padding: 5px 0;
+        font-size: small;
+        text-decoration: none; }
+  /* WRAPPER*/
+  .wrapper {
+    /* Design selection */
+    /* Design archives */
+    /* Zen resources */ }
+    .wrapper .design-selection {
+      all: unset; }
+      .wrapper .design-selection h3 {
+        position: absolute;
+        right: inherit;
+        left: 50%;
+        transform: translateX(120%);
+        top: 55vh;
+        transition: transform 0.5s ease-out; } }
+      @media only screen and (min-width: 625px) and (min-width: 800px) {
+        .wrapper .design-selection h3 {
+          transform: translateX(170%);
+          transition: transform 0.5s ease-out; } }
+
+@media only screen and (min-width: 625px) {
+        .wrapper .design-selection h3.open {
+          position: static;
+          transform: translateX(-160%);
+          transition: all 0.5s ease-out; }
+      .wrapper .design-selection.open nav:last-child {
+        margin-bottom: auto; }
+      .wrapper .design-selection ul {
+        background-color: aquamarine;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        /* Design a scrollbar */ }
+        .wrapper .design-selection ul::-webkit-scrollbar {
+          height: 6px; }
+        .wrapper .design-selection ul::-webkit-scrollbar-thumb {
+          background: #000;
+          border-radius: 10px; }
+        .wrapper .design-selection ul li {
+          scroll-snap-align: start; }
+      .wrapper .design-selection li {
+        width: 100vw;
+        background-color: #d9b0ff;
+        text-align: center;
+        /* Adding a preview picture */ }
+        .wrapper .design-selection li:first-child {
+          margin-left: -40px;
+          background-color: antiquewhite; }
+        .wrapper .design-selection li .design-name::before {
+          content: "";
+          width: 98vw;
+          height: 50vw;
+          max-height: 300px;
+          display: inline-block;
+          background-size: 100vw;
+          background-image: url("../images/image.png");
+          background-repeat: no-repeat; }
+    .wrapper .design-archives {
+      all: unset; }
+      .wrapper .design-archives h3 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(75%);
+        top: 75vh;
+        transition: transform 0.5s ease-out; } }
+      @media only screen and (min-width: 625px) and (min-width: 800px) {
+        .wrapper .design-archives h3 {
+          transform: translateX(125%);
+          transition: transform 0.5s ease-out; } }
+
+@media only screen and (min-width: 625px) {
+        .wrapper .design-archives h3.open {
+          position: static;
+          transform: translateX(-160%);
+          transition: all 0.5s ease-out; }
+      .wrapper .design-archives.open nav:last-child {
+        margin-bottom: auto; }
+    .wrapper .zen-resources {
+      all: unset; }
+      .wrapper .zen-resources h3 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-140%);
+        top: 73vh;
+        transition: transform 0.5s ease-out; } }
+      @media only screen and (min-width: 625px) and (min-width: 800px) {
+        .wrapper .zen-resources h3 {
+          transform: translateX(-190%);
+          transition: transform 0.5s ease-out; } }
+
+@media only screen and (min-width: 625px) {
+        .wrapper .zen-resources h3.open {
+          position: static;
+          transform: translateX(-160%);
+          transition: all 0.5s ease-out; }
+      .wrapper .zen-resources.open nav:last-child {
+        margin-bottom: auto; } }
+
+/* Typography */
+/* Typography */
+h1,
+h2, h3 {
+  font-family: "Acme", sans-serif;
+  color: #452f3c; }
+
+p {
+  line-height: 1.4;
+  color: #242c27; }
+
+.open p, .open nav, .open ul {
+  background: #eff1f6;
+  margin: 0 auto;
+  padding: 5px; }
+  .open p:first-of-type, .open nav:first-of-type, .open ul:first-of-type {
+    margin-top: 20px; }
+
+a {
+  color: #836685;
+  text-decoration: underline; }
+
+/* Navigation */
+/* Navigation */
+header {
+  background-color: #eabed2; }
+
+h3 {
+  background: #da9d9d; }
+  h3:hover {
+    background: #be5353;
+    color: black; }

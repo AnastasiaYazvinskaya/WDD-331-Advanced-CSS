@@ -1,0 +1,198 @@
+/*
+Author: Anastasia Yazvinskaya, Jatsiri Martinez, Gabriela Alvarez
+Class: WDD 331 - 09 (Fall 2021)
+Assignment: ZenGarden (W08-W13)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Open+Sans+Condensed:wght@300&display=swap");
+h1,
+h2, h3 {
+  font-family: "Acme", sans-serif;
+  color: #533748; }
+
+h3 {
+  font-size: 2em; }
+
+p {
+  line-height: 1.4;
+  color: #516559; }
+
+a {
+  color: #836685;
+  text-decoration: underline; }
+
+/* Base design (Small view - width: 300px - 600px) */
+body {
+  padding: 30px;
+  background-color: #fff; }
+
+.page-wrapper {
+  margin: 0 auto; }
+
+ul, li {
+  list-style: none; }
+
+/* INTRO */
+/* Banner */
+.intro {
+  /* Header */
+  /* Summary */
+  /* Preamble */ }
+  .intro header {
+    text-align: center;
+    content: url("../images/logo-small.jpg");
+    margin: 2px auto; }
+  .intro .summary {
+    margin: 30px auto;
+    text-align: center; }
+  .intro .preamble {
+    background-image: url("../images/theroad.jpg");
+    background-size: 85vw;
+    padding-top: 150px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    width: auto; }
+    .intro .preamble h3 {
+      text-align: center;
+      margin-top: -150px; }
+    .intro .preamble p:first-of-type {
+      padding-top: 80px; }
+
+/* SUPPORTING */
+.supporting {
+  /* Explanation, Participation, Benefits, Requirements */
+  /* Benefits */
+  /* Footer */ }
+  .supporting div h3 {
+    margin-bottom: -10px; }
+  .supporting div:nth-child(2n) h3 {
+    text-align: right; }
+  .supporting .benefits {
+    background-image: url("../images/benefits2.jpg");
+    background-repeat: no-repeat;
+    width: auto;
+    height: 250px; }
+    .supporting .benefits p {
+      color: black; }
+  .supporting .requirements {
+    background: radial-gradient(at top right, #ecd1ee, #d9eec9), radial-gradient(at bottom left, #dee2ed, transparent);
+    padding: 1em 2%;
+    border-radius: 50px; }
+  .supporting footer {
+    text-align: center; }
+    .supporting footer a {
+      margin: 0 10px; }
+
+/* WRAPPER*/
+.wrapper {
+  text-align: center;
+  /* Design selection */
+  /* Design archives */
+  /* Zen resources */ }
+  .wrapper .design-selection ul {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    /* Design a scrollbar */ }
+    .wrapper .design-selection ul::-webkit-scrollbar {
+      height: 6px; }
+    .wrapper .design-selection ul::-webkit-scrollbar-thumb {
+      background: #000;
+      border-radius: 10px; }
+    .wrapper .design-selection ul li {
+      scroll-snap-align: start; }
+  .wrapper .design-selection li {
+    flex: 0 0 100%;
+    text-align: center;
+    /* Adding a preview picture */ }
+    .wrapper .design-selection li .design-name::before {
+      content: "";
+      width: 100vw;
+      height: 50vw;
+      max-height: 300px;
+      display: inline-block;
+      background-size: 100vw;
+      background-image: url("../images/image.png");
+      background-repeat: no-repeat; }
+    .wrapper .design-selection li:nth-child(1) .design-name::before {
+      background-image: url("../images/midCenturyModern.png"); }
+    .wrapper .design-selection li:nth-child(2) .design-name::before {
+      background-image: url("../images/garments.png"); }
+    .wrapper .design-selection li:nth-child(3) .design-name::before {
+      background-image: url("../images/steel.png"); }
+    .wrapper .design-selection li:nth-child(4) .design-name::before {
+      background-image: url("../images/apothecary.png"); }
+    .wrapper .design-selection li:nth-child(5) .design-name::before {
+      background-image: url("../images/screenFiller.png"); }
+    .wrapper .design-selection li:nth-child(6) .design-name::before {
+      background-image: url("../images/fountainKiss.png"); }
+    .wrapper .design-selection li:nth-child(7) .design-name::before {
+      background-image: url("../images/robotNamedJimmy.png"); }
+    .wrapper .design-selection li:nth-child(8) .design-name::before {
+      background-image: url("../images/verdeModerna.png"); }
+  .wrapper .design-archives ul {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: space-between; }
+  .wrapper .design-archives li {
+    flex: 0 0 50%;
+    text-align: center; }
+  .wrapper .zen-resources ul {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: space-between; }
+  .wrapper .zen-resources li {
+    flex: 0 0 20%;
+    text-align: center; }
+
+/* Additional design (Large view - width >= 600px*/
+@media only screen and (min-width: 600px) {
+  body {
+    padding: 50px; }
+  /* INTRO */
+  .intro {
+    display: grid;
+    grid-template-columns: 48.5% 48.5%;
+    grid-gap: 20px;
+    /* Summary */
+    /* Preamble */ }
+    .intro .summary {
+      margin-top: -5px;
+      text-align: right;
+      font-size: medium; }
+      .intro .summary p:nth-child(1) {
+        font-size: smaller;
+        padding-left: 40%;
+        margin-bottom: -15px; }
+    .intro div:nth-child(3) {
+      grid-column: 1/3;
+      padding-left: 48.5%;
+      margin-top: -50px; }
+  /* SUPPORTING */
+  .supporting {
+    display: grid;
+    grid-template-columns: 48.5% 48.5%;
+    grid-gap: 20px;
+    /* Explanation, Requirements, Footer */
+    /* Partticipation, Benefits, Requirements*/
+    /* Participation */
+    /* Creating a scrollbar */ }
+    .supporting div:nth-child(1), .supporting div:nth-child(4), .supporting footer {
+      grid-column: 1/3; }
+    .supporting div:nth-child(2) h3, .supporting div:nth-child(3) h3, .supporting div:nth-child(4) h3 {
+      text-align: center; }
+    .supporting .participation {
+      direction: rtl; }
+      .supporting .participation p {
+        direction: ltr; }
+    .supporting div:nth-child(2) {
+      height: 200px;
+      overflow-y: scroll; }
+      .supporting div:nth-child(2)::-webkit-scrollbar {
+        width: 6px; }
+      .supporting div:nth-child(2)::-webkit-scrollbar-track {
+        border-radius: 10px; }
+      .supporting div:nth-child(2)::-webkit-scrollbar-thumb {
+        background: #000;
+        border-radius: 10px; } }

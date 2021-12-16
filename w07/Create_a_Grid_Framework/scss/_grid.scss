@@ -1,0 +1,64 @@
+/*
+Author: Anastasia Yazvinskaya
+Class: WDD 331 - 09 (Fall 2021)
+Assignment: Create a Grid Framework (W07)
+*/
+$num-columns : 8;
+$one-column : 100% / $num_columns;
+$loop-start: 1;
+$loop-end: $num-columns +1;
+$one-column: 12.5%;
+
+$color-1: #ff1c1c; //Red
+$color-2: #b3f36d; //Green
+// $color-3: #000;
+
+@mixin col($span-num) {
+flex: 0 0 $one-column * $span-num;
+}
+
+@mixin offset($offset-num) {
+margin-left: $one-column * $offset-num;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: space-between;
+    height: 100%;
+}
+
+.cell {
+      flex: 1;
+      text-align: center;
+}
+
+//make column classes 
+@for $index from $loop-start to $loop-end {
+    .col-#{$index} {
+        @include col($index);
+    }
+}
+   
+//make offset classes
+@for $index from $loop-start to $loop-end {
+    .offset-#{$index} {
+        @include offset($index);
+    }
+}
+
+.red {
+    stroke: $color-1;
+    fill: $color-1;
+}
+.green {
+    stroke: $color-2;
+    fill: $color-2;
+}
+/*
+.black {
+    stroke: $color-3;
+    fill: $color-3;
+}
+*/

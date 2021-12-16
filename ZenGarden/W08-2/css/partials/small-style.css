@@ -1,0 +1,154 @@
+/* Small view - width: 300px - 600px */
+/* INTRO */
+.intro {
+  /* Header (Banner) */
+  /* Summary */
+  /* Preamble */ }
+  .intro header {
+    padding: 45px 5px; }
+    .intro header h2 {
+      font-size: small;
+      margin-top: -20px; }
+  .intro .summary {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: small; }
+    .intro .summary p, .intro .summary a {
+      display: inline-block;
+      margin: 0 auto; }
+  .intro .preamble {
+    position: relative;
+    bottom: 10px; }
+    .intro .preamble h3 {
+      position: inherit;
+      right: 80px;
+      padding: 45px 5px; }
+    .intro .preamble.open p:last-child {
+      margin-bottom: 100px; }
+
+/* SUPPORTING */
+.supporting {
+  /* Explanation */
+  /* Participation */
+  /* Benefits */
+  /* Requirements */
+  /* Footer */ }
+  .supporting .explanation {
+    position: relative;
+    bottom: 100px;
+    margin-bottom: -100px; }
+    .supporting .explanation h3 {
+      position: inherit;
+      left: 80px;
+      padding: 45px 5px; }
+    .supporting .explanation.open p:last-child {
+      margin-bottom: 55px; }
+  .supporting .participation {
+    position: relative;
+    bottom: 50px;
+    margin-bottom: -50px; }
+    .supporting .participation h3 {
+      position: inherit;
+      right: 32.5px;
+      padding: 45px 5px; }
+    .supporting .participation.open p:last-child {
+      margin-bottom: 70px; }
+  .supporting .benefits {
+    position: relative;
+    bottom: 65px;
+    margin-bottom: -65px; }
+    .supporting .benefits h3 {
+      position: inherit;
+      left: 120px; }
+    .supporting .benefits.open p:last-child {
+      margin-bottom: 30px; }
+  .supporting .requirements {
+    position: relative;
+    bottom: 25px;
+    margin-bottom: -25px; }
+    .supporting .requirements h3 {
+      position: inherit;
+      left: 40px;
+      padding: 45px 5px; }
+    .supporting .requirements.open p:last-child {
+      margin-bottom: 85px; }
+  .supporting footer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%); }
+    .supporting footer a {
+      display: inline;
+      padding: 5px 0;
+      font-size: small;
+      text-decoration: none; }
+
+/* WRAPPER*/
+.wrapper {
+  /* Design selection */
+  /* Design archives */
+  /* Zen resources */ }
+  .wrapper .design-selection {
+    position: relative;
+    bottom: 80px;
+    margin-bottom: -80px; }
+    .wrapper .design-selection h3 {
+      position: inherit;
+      right: 85px;
+      padding: 55px 5px; }
+    .wrapper .design-selection.open nav:last-child {
+      margin-bottom: 65px; }
+    .wrapper .design-selection ul {
+      background-color: aquamarine;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      /* Design a scrollbar */ }
+      .wrapper .design-selection ul::-webkit-scrollbar {
+        height: 6px; }
+      .wrapper .design-selection ul::-webkit-scrollbar-thumb {
+        background: #000;
+        border-radius: 10px; }
+      .wrapper .design-selection ul li {
+        scroll-snap-align: start; }
+    .wrapper .design-selection li {
+      width: 100vw;
+      background-color: #d9b0ff;
+      text-align: center;
+      /* Adding a preview picture */ }
+      .wrapper .design-selection li:first-child {
+        margin-left: -40px;
+        background-color: antiquewhite; }
+      .wrapper .design-selection li .design-name::before {
+        content: "";
+        width: 98vw;
+        height: 50vw;
+        max-height: 300px;
+        display: inline-block;
+        background-size: 100vw;
+        background-image: url("../images/image.png");
+        background-repeat: no-repeat; }
+  .wrapper .design-archives {
+    position: relative;
+    bottom: 60px;
+    margin-bottom: -60px; }
+    .wrapper .design-archives h3 {
+      position: inherit;
+      left: 95px;
+      padding: 30px 5px; }
+    .wrapper .design-archives.open nav:last-child {
+      margin-bottom: 55px; }
+  .wrapper .zen-resources {
+    position: relative;
+    bottom: 50px;
+    margin-bottom: -50px; }
+    .wrapper .zen-resources h3 {
+      position: inherit;
+      padding: 35px 5px; }
+    .wrapper .zen-resources.open nav:last-child {
+      margin-bottom: 0px; }

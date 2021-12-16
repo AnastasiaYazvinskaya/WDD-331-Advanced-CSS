@@ -1,0 +1,98 @@
+<!--
+Author: Anastasia Yazvinskaya
+Class: WDD 331 - 09 (Fall 2021)
+Assignment: Card Front part 2 (W08)
+-->
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>W08 Cards front</title>
+    </head>
+    <body>
+        <!-- SVG shapes for pips -->
+        <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <symbol id="icon-rozes" viewBox="0 0 300 300">
+                <title>Red rozes</title>
+                <g>
+                    <path class = "red" d="M139,123 C130,114 116,140 121,143 C127,145 141,128 139,123 Z"/>
+                    <path class = "red" d="M129,115 C115,112 106,126 116,147 C114,131 120,120 129,115 Z"/>
+                    <path class = "red" d="M131,110 C152,116 146,148 125,150 C143,138 148,119 131,110 Z"/>
+                    <path class = "red" d="M174,143 C153,176 110,178 87,143 C111,158 143,160 174,143 Z"/>
+                    <path class = "red" d="M162,133 C171,100 119,73 113,96 C99,97 86,120 97,132 C101,101 150,90 162,133 Z"/>
+                    <path class = "red" d="M115,86 C90,83 71,90 69,110 C52,126 62,167 90,168 C69,138 79,98 115,86 Z"/>
+                    <path class = "red" d="M180,145 C191,143 194,129 188,119 C201,91 145,65 140,75 C161,91 178,113 180,145 Z"/>
+                    <path class = "red" d="M120,186 C142,203 186,174 179,158 C167,167 145,184 120,186 Z"/>
+                    <path class = "red" d="M76,180 C82,214 137,233 163,207 C132,206 106,197 76,180 Z"/>
+                    <path class = "red" d="M177,195 C210,193 226,145 201,120 C203,150 190,177 177,195 Z"/>
+                    <g>
+                    <path class = "green" d="M249,131 C232,139 230,93 288,130 C239,178 232,139 249,131 Z"/>
+                    <path class = "green" d="M248,188 C226,178 272,147 274,221 C195,213 226,178 248,188 Z"/>
+                    <path class = "green" d="M173,46 C170,64 134,45 194,20 C199,79 170,64 173,46 Z"/>
+                    <path class = "green" d="M42,189 C65,185 49,148 12,212 C83,217 65,185 42,189 Z"/>
+                    <path class = "green" d="M62,243 C82,221 28,206 50,284 C124,239 82,221 62,243 Z"/>
+                    </g>
+                </g>
+                </symbol>
+            </defs>
+        </svg>
+
+        <!-- begin card -->
+        <div class="card card-front">
+        <div class="row">
+        <!-- this will be for the small pip in the top left corner with the number of the card -->  
+            <div class="number cell col-1">7
+                <svg class="icon">
+                    <use xlink:href="#icon-rozes"></use>
+                </svg>
+            </div>
+        <!-- then 7 more pips for the body of the card -->
+            <div class="cell col-2">
+                <svg class="icon">
+                    <use xlink:href="#icon-rozes"></use>
+                </svg>
+            </div>
+            <div class="cell col-2 offset-2">
+                <svg class="icon">
+                    <use xlink:href="#icon-rozes"></use>
+                </svg>
+            </div>
+
+            <div class="cell col-8">
+                <svg class="icon">
+                    <use xlink:href="#icon-rozes"></use>
+                </svg>
+            </div>
+        
+            <div class="cell col-2 offset-1" >
+                <svg class="icon rotate">
+                    <use xlink:href="#icon-rozes"></use>
+                </svg>
+            </div>
+            <div class="cell col-2 offset-2">
+                <svg class="icon rotate">
+                    <use xlink:href="#icon-rozes"></use>
+                </svg>
+            </div>
+            <div class="cell col-2 offset-1">
+                <svg class="icon rotate">
+                    <use xlink:href="#icon-rozes"></use>
+                </svg>
+            </div>
+            <div class="cell col-2 offset-2">
+                <svg class="icon rotate">
+                    <use xlink:href="#icon-rozes"></use>
+                </svg>
+            </div>
+        <!-- Then the number and pip for the bottom right...upside down -->
+            <div class="rotate number cell col-1">7
+                <svg class="icon">
+                    <use xlink:href="#icon-rozes"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+</body>

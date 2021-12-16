@@ -1,0 +1,243 @@
+/*
+Author: Anastasia Yazvinskaya, Jatsiri Martinez, Gabriela Alvarez
+Class: WDD 331 - 09 (Fall 2021)
+Assignment: ZenGarden 
+
+
+/*# sourceMappingURL=styles.css.map */
+/*
+Author: Anastasia Yazvinskaya, Jatsiri Martinez, Gabriela Alvarez
+Class: WDD 331 - 09 (Fall 2021)
+Assignment: ZenGarden (W08-W13)
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Open+Sans+Condensed:wght@300&display=swap");
+h1,
+h2, h3 {
+  font-family: "Acme", sans-serif;
+  color: #644356;
+}
+
+p {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: #516559;
+}
+
+a {
+  color: #836685;
+  text-decoration: underline;
+}
+/* Base design (Small view - width: 300px - 600px) */
+.page-wrapper {
+  margin: 0 auto; 
+  max-width: 1500px;
+}
+
+ul, li {
+  list-style: none; }
+
+/* INTRO */
+/* Banner */
+  .intro header {
+    text-align: center; 
+  }
+   
+      .intro header {
+        content: url("../images/logo.jpg");
+        margin: 2px;
+        position: relative;
+        top: 40px;
+      }
+
+      .preamble {
+        background-image: url("../images/theroad.jpg");
+        padding: 250px;
+        margin: 60px;
+        background-repeat: no-repeat;
+        width: auto;
+      }
+
+      .preamble h3 {
+        font-size: 3em;
+        margin: -150px;
+      }
+
+      .preamble p {
+        font-size: 1em;
+      }
+      .preamble p:first-of-type {
+        padding-top: 125px;
+      }
+
+  .intro .summary {
+    margin: 30px auto;
+    text-align: center; }
+  .intro .preamble h3 {
+    text-align: center; }
+
+/* SUPPORTING */
+.supporting {
+  /* Explanation, Participation, Benefits, Requirements */
+  /* Footer */ }
+  .supporting div h3 {
+    margin-bottom: -10px; }
+  .supporting div:nth-child(2n) h3 {
+    text-align: right; }
+  .supporting footer {
+    text-align: center; }
+    .supporting footer a {
+      margin: 0 10px; }
+
+        h3 {
+        font-size: 2em;
+       
+      }
+
+  .benefits {
+    background-image: url("../images/benefits2.jpg");
+    padding: 150px;
+    margin: 60px;
+    background-repeat: no-repeat;
+    width:auto;
+  }
+
+  .benefits h3 {
+    font-size: 2em;
+    margin: -65px;
+  }
+
+  .benefits p {
+    float: inline;
+    font-size: 1em;
+    padding: 50px;
+  }
+
+  .requirements {
+    background:
+    radial-gradient(at top right,#ecd1ee,#d9eec9),
+    radial-gradient(at bottom left,#dee2ed, transparent);
+    padding: 1em 2%;
+    border-radius: 50px;
+  }
+
+/* WRAPPER*/
+.wrapper {
+  text-align: center;
+  /* Design selection */
+  /* Design archives */
+  /* Zen resources */ }
+  .wrapper .design-selection ul {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    /* Design a scrollbar */ }
+    .wrapper .design-selection ul::-webkit-scrollbar {
+      height: 6px; }
+    .wrapper .design-selection ul::-webkit-scrollbar-thumb {
+      background: #000;
+      border-radius: 10px; }
+    .wrapper .design-selection ul li {
+      scroll-snap-align: start; }
+  .wrapper .design-selection li {
+    flex: 0 0 100%;
+    text-align: center;
+  }
+    /* Adding a preview picture */ 
+    .wrapper .design-selection li .design-name::before {
+      content: "";
+      width: 100vw;
+      height: 50vw;
+      max-height: 300px;
+      display: inline-block;
+      background-size: 100vw;
+      background-image: url("../images/apothecary.png");
+      background-repeat: no-repeat; }
+
+    
+  .wrapper .design-archives ul {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: space-between; }
+  .wrapper .design-archives li {
+    flex: 0 0 50%;
+    text-align: center; }
+  .wrapper .zen-resources ul {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: space-between; }
+  .wrapper .zen-resources li {
+    flex: 0 0 20%;
+    text-align: center; }
+
+    /* link*/
+
+    .zen-validate-html, .zen-validate-css, .zen-license, .zen-accessibility, .zen-github {
+      display: inline;
+     font-family: "Acme", sans-serif;
+     color:#dee2ed;
+     margin: 1em;
+  }   
+ 
+  .zen-validate-html, .zen-validate-css, .zen-license, .zen-accessibility, .zen-github {
+     border-radius: 50px;
+     background: #644356;
+     padding: 2.5em;
+     margin-right: 2em;
+  }
+ 
+  .zen-validate-html, .zen-validate-css, .zen-license, .zen-accessibility, .zen-github a:hover{
+     background: #644356;
+ }
+
+/* Additional design (Large view - width >= 600px*/
+@media only screen and (min-width: 600px) {
+  /* INTRO */
+  .intro {
+    display: grid;
+    grid-template-columns: 48.5% 48.5%;
+    grid-gap: 20px;
+    /* Summary */
+    /* Preamble */ }
+    .intro .summary {
+      margin-top: -5px;
+      text-align: right;
+      font-size: medium; }
+      .intro .summary p:nth-child(1) {
+        font-size: smaller;
+        padding-left: 40%;
+        margin-bottom: -15px; }
+    .intro div:nth-child(3) {
+      grid-column: 1/3;
+      padding-left: 48.5%;
+      margin-top: -50px; }
+  /* SUPPORTING */
+  .supporting {
+    display: grid;
+    grid-template-columns: 48.5% 48.5%;
+    grid-gap: 20px;
+    /* Explanation, Requirements, Footer */
+    /* Partticipation, Benefits, Requirements*/
+    /* Participation */
+    /* Creating a scrollbar */ }
+    .supporting div:nth-child(1), .supporting div:nth-child(4), .supporting footer {
+      grid-column: 1/3; }
+    .supporting div:nth-child(2) h3, .supporting div:nth-child(3) h3, .supporting div:nth-child(4) h3 {
+      text-align: center; }
+    .supporting .participation {
+      direction: rtl; }
+      .supporting .participation p {
+        direction: ltr; }
+    .supporting div:nth-child(2) {
+      height: 450px;
+      overflow-y: scroll; }
+      .supporting div:nth-child(2)::-webkit-scrollbar {
+        width: 6px; }
+      .supporting div:nth-child(2)::-webkit-scrollbar-track {
+        border-radius: 10px; }
+      .supporting div:nth-child(2)::-webkit-scrollbar-thumb {
+        background: #000;
+        border-radius: 10px; } }

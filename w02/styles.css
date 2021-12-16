@@ -1,0 +1,43 @@
+/*
+Author: Anastasia Yazvinskaya
+Class: WDD 331 - 09 (Fall 2021)
+Assignment: Quiz Part B (W02)
+*/
+
+/* Question 1
+    The second <p> of the second <fieldset> could be selected by either of these selectors below.
+    Explain why the first would be a better option than the second.
+    
+    fieldset[title=fieldset2] > p + p
+    fieldset:nth-of-type(2) >p + p
+
+By this (fieldset[title=fieldset2] > p + p) selector will be selected all child paragraphs for 'fieldset' with 'title' attribute equal to "fieldset2" except the first paragraph. 
+By this (fieldset:nth-of-type(2) > p + p) selector will be selected all child paragraphs for the second 'fieldset' except the first paragraph.
+I would say that the first selector is better because we can choose a specific fieldset. If we will change HTML code and will add a new fieldset between first and second then the style by first selector will be saved for the correct elements. The second selector will transfer the style to another object.
+*/
+
+/* Question 2
+    Explain the difference the space makes with the following two selectors: "span.help" and "span .help". 
+    How does it change what will be selected?
+
+span.help - means a "span" element with a "help" class. The whole "span" element with "help" class will be selected.
+span .help - means a descendant element with a 'help' class for 'span' element. The element with 'help' class in the 'span' block will be selected.
+*/
+
+/* Question 3
+    For the example HTML, write the CSS that would surround the help text (class=“help”) with parenthesis.
+*/
+.help::before {
+    content: "(";
+}
+.help::after {
+    content: ")";
+}
+
+/* Question 4
+    Short forms are always nice.
+    Write a CSS rule that will hide any paragraphs in a fieldset after the 2nd.
+*/
+fieldset p:nth-child(n+4) {
+    display: none;
+}

@@ -1,0 +1,76 @@
+.curtain {
+    margin: 0 auto; /* Centered the component */
+    width: 100%; /* Ensures the component is the full screen width */
+    height: 100vh; /* Height is 100% of the window height */
+    overflow: hidden; /* Allows us to slide the panels outside the container without them showing */
+    
+    &__wrapper {
+      /* Ensures the component is the full screen width and height */
+      width: 100%; 
+      height: 100%;
+      
+      input[type=checkbox] {
+        position: absolute; /* Force the checkbox at the start of the container */
+        cursor: pointer; /* Indicate the curtain is clickable */
+        width: 100%; /* The checkbox is as wide as the component */
+        height: 100%; /* The checkbox is as tall as the component */
+        z-index: 100; /* Make sure the checkbox is on top of everything else */
+        opacity: 0; /* hide the checkbox */
+        top: 0; /* Place at the top of the window */
+        left: 0; /* Place at the left of the window */
+        
+        // When the checkbox is checked...
+        &:checked {
+          // Slide the first panel
+          &~div.curtain__panel--left {
+            transform: translateX(0);
+          }
+          // Slide the second panel
+          &~div.curtain__panel--right {
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+    
+    &__panel {
+      display: flex; /* Display paneles in line (needed for "justify-content: flex-end/start") */
+      align-items: center; /* Place text at the center by Y-coord */
+      background: #9028af; /* The violet color for panels */
+      color: #fdeec6; /* The beige color for text */
+      float: left; /* Makes sure panels are side-by-side */
+      width: 50%; /* Each panel takes up half the container */
+      height: 100vh; /* Height is 100% of the window height */
+      transition: all 1s ease-out; /* Animates the sliding transition */
+      position: relative; /* Needed to define the z-index */
+      z-index: 2; /* Places the panels in front of the prize */
+      &--left {
+        justify-content: flex-end; /* Place at the right */
+        transform: translateX(-100%); /* Slide the panel to the left out of the container */
+      }
+      &--right {
+        justify-content: flex-start; /* Place at the left */
+        transform: translateX(100%); /* Slide the panel to the right out of the container */
+      }
+    }
+    
+    &__prize {
+      align-items: center; /* Place items at the center by X-coord */
+      background: #333; /* The gray color for background*/
+      color: #fff; /* The white color for text */
+      display: flex; /* Display items in column at the center of screen */
+      flex-direction: column; /* Display items in column */
+      height: 100vh; /* Height is 100% of the window height */
+      justify-content: center; /* Place items at the center by Y-coord */
+      padding: 1rem 0;
+      position: absolute; /* Forces the prize position into the container start */
+      text-align: center; /* Place text at the center by X-coord */
+      z-index: 1; /* Places the prize behind the panels, which are z-index 2 */
+      width: 100%; /* The prize part is as wide as the component */
+      
+      img {
+        width: 40%; /* The prize image is 40% of width of the component */
+      }
+    }
+  
+  }

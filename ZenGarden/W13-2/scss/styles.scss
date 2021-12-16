@@ -1,0 +1,70 @@
+/*
+Author: Anastasia Yazvinskaya, Jatsiri Martinez, Gabriela Alvarez
+Class: WDD 331 - 09 (Fall 2021)
+Assignment: ZenGarden (W08-W13)
+*/
+
+/* Variables */
+$color-1: #dee2ed; // 
+$color-2: #a78fa9; // 
+$color-3: #644356; // 
+$color-4: #516559; // 
+$color-5: #9db18e; //
+$color-6: #ccc; // 
+$color-7: #ca5e90; //
+$color-8: rgb(179, 68, 68); //
+
+$success: #6fce72; // green
+$alert: #f18686; // red
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Open+Sans+Condensed:wght@300&display=swap');
+$primary-font: 'Open Sans Condensed', sans-serif;
+$secondary-font: 'Acme', sans-serif;
+
+/* Base design */
+.page-wrapper {
+    //width: 90vw; //width of content equels 90% of window width
+    margin: 0 auto; //place at the center
+    padding-top: 45px;
+    padding-bottom: 20px;
+}
+header, h3 {
+    margin: 0 auto; //place at the center horizontal
+    text-align: center; //centerize text
+    border-radius: 50%; //round border's corners
+    width: fit-content; //width equels content width
+    padding: 25px 5px; //centerize content in box
+}
+h3 {
+    max-width: 135px; //max width of content
+    &:hover {
+        cursor: pointer; //pointer cursor when element is hover
+    }
+}
+p, ul, nav, a {
+    display: none; //hide all except headers
+}
+.open  {
+    a {
+        display: inline; //show hidden part
+    }
+    p, ul, nav {
+        display: block; //show hidden part
+    }
+}
+
+ul, li {
+    list-style: none; //delete style for list
+}
+
+/* Additional design (Small view - width < 600px) */
+@import 'partials/small-style';
+
+/* Additional design (Large view - width >= 600px) */
+@import 'partials/large-style';
+
+/* Typography */
+@import 'partials/typography';
+/* Navigation */
+@import 'partials/navigation';

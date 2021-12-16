@@ -1,0 +1,12 @@
+/* Navigation */
+header {
+    background-color: lighten($color-7, 25%);
+}
+
+h3 {
+    background: lighten($color-8, 25%);
+    &:hover {
+        background: lighten($color-8, 5%);
+        color: darken($color-3, 40%);
+    }
+}
